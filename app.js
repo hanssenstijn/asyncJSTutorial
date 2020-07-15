@@ -1,4 +1,4 @@
-//Sync code example
+//Async code example
 
 function otherFunct() {
   console.log('we are in another funct');
@@ -7,6 +7,8 @@ function otherFunct() {
 
 console.log('Start');
 
-otherFunct();
+setTimeout(() => {
+  console.log("We are in the timeout");
+}, 2000);
 
 console.log('End');
