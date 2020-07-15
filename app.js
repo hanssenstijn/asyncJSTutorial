@@ -1,14 +1,15 @@
-//Async code example
-
-function otherFunct() {
-  console.log('we are in another funct');
-  console.log('do some stuff');
-}
 
 console.log('Start');
 
-setTimeout(() => {
-  console.log("We are in the timeout");
-}, 2000);
+
+function loginUser(email, password) {
+  setTimeout(() => {
+    console.log('Now we have the data');
+    return { userEmail: email };
+  }, 1500);
+}
+
+const user = loginUser('hanssenstijn@gmail.com', 123456);
+console.log(user)
 
 console.log('End');
