@@ -38,6 +38,15 @@ loginUser('S', 'H')
 
 console.log('End');
 
+async function displayUser() {
+  const loginUser = await loginUser('S', 123);
+  const videos = await getUserVideos(loginUser.userEmail);
+  const detail = await videoDetails(videos[0]);
+  console.log(detail);
+}
+
+displayUser();
+
 const yt = new Promise(resolve => {
   setTimeout(() => {
     console.log('getting stuff from youtube');
